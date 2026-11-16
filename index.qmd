@@ -1,0 +1,510 @@
+---
+title: "Historia, Conceptos y Variables"
+subtitle: "Taller Uno – Estadística"
+author: "David Santiago Rivas Portela                              y
+
+  Judy Esperanza Jiménez Rodríguez"
+date: today
+lang: es
+format:
+  html:
+    toc: true
+    toc-location: right
+    toc-title: "Contenido del trabajo"
+    number-sections: false
+    theme: cosmo
+    fontsize: 12pt
+    smooth-scroll: true
+    code-fold: true
+    embed-resources: true
+    css: estilos.css
+editor: visual
+---
+
+```{=html}
+<style>
+:root {
+  --azul-esap: #12345A;
+  --azul-claro: #EAF1F8;
+  --dorado: #D5A52A;
+}
+
+body {
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  color: var(--azul-esap);
+}
+
+h1 {
+  border-bottom: 3px solid var(--dorado);
+  padding-bottom: 10px;
+}
+
+h2 {
+  border-left: 5px solid var(--dorado);
+  padding-left: 12px;
+  margin-top: 30px;
+}
+
+.portada {
+  background: linear-gradient(135deg, #12345A, #24527A);
+  color: white;
+  padding: 45px 25px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 25px 0 40px 0;
+}
+
+.portada h1 {
+  color: white;
+  border: none;
+  font-size: 32px;
+}
+
+.portada h3 {
+  color: #F2CF70;
+}
+
+.portada p {
+  color: white;
+}
+
+.datos {
+  border-top: 3px solid var(--dorado);
+  padding-top: 18px;
+  margin-top: 25px;
+}
+
+.callout {
+  border-radius: 8px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background-color: #12345A;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #EDF3F8;
+}
+
+blockquote {
+  border-left: 5px solid #D5A52A;
+  background: #F4F7FA;
+  padding: 15px;
+}
+
+</style>
+```
+
+::: {style="display:flex; justify-content:flex-end; align-items:center; padding:10px 15px; border-bottom:3px solid #D5A52A;"}
+![](logo_ESAP.png.png){width="145px"}
+:::
+
+:::: portada
+# HISTORIA, CONCEPTOS Y VARIABLES
+
+### TALLER UNO – ESTADÍSTICA
+
+<p>Escuela Superior de Administración Pública</p>
+
+<p>ESAP</p>
+
+::: datos
+**Presentado por:**
+
+David Santiago Rivas Portela
+
+Judy Esperanza Jimenez Rodriguez
+
+**Asignatura:**
+
+Estadística 1
+:::
+::::
+
+# Introducción
+
+La estadística es una herramienta fundamental para comprender la realidad, organizar información y tomar decisiones fundamentadas. Desde las primeras civilizaciones hasta la actualidad, ha permitido conocer las características de las poblaciones, estudiar diferentes fenómenos y encontrar soluciones a problemas de la sociedad.
+
+En este trabajo se presenta un recorrido por la historia de la estadística, sus principales conceptos y la clasificación de las variables, utilizando ejemplos sencillos que facilitan su comprensión y aplicación en diferentes contextos.
+
+::: {.callout-note appearance="simple"}
+**Objetivo del taller**
+
+Comprender el origen y la evolución de la estadística, identificar sus conceptos fundamentales y reconocer los diferentes tipos de variables y sus escalas de medición.
+:::
+
+# 1. Historia de la Estadística
+
+1.1. Origen de la estadística
+
+La estadística nace de la necesidad que tenían los gobernantes de conocer a sus pueblos para poder administrarlos y tomar decisiones. Su nombre está relacionado con el término latino *status*, que significa Estado.
+
+Desde sus inicios, la estadística ha permitido registrar información sobre habitantes, animales, tierras, producción y recursos económicos.
+
+::: callout-important
+**Una idea fundamental:**
+
+Los datos por sí solos no siempre explican una situación. Cuando se organizan, analizan e interpretan, se convierten en información que permite tomar mejores decisiones.
+
+**Dato + análisis estadístico = Información útil.**
+:::
+
+1.2. Evolución histórica de la estadística
+
+| Época o civilización | Aportes a la estadística |
+|:-----------------------------------|:-----------------------------------|
+| Primeras comunidades | Utilizaban marcas en cuevas, piedras y palos para contar animales, personas y herramientas. |
+| Babilonios (3000 a. C.) | Utilizaban tablillas de arcilla para registrar información sobre producción, comercio y recursos. |
+| Egipcios | Realizaban registros y censos de población, tierras y riquezas para organizar la administración y los impuestos. |
+| Hebreos | En el libro bíblico de Números aparece la instrucción de realizar un censo de la población de Israel. |
+| Chinos | Desarrollaron registros de población, agricultura, industria y comercio desde tiempos antiguos. |
+| Griegos | Realizaban censos para organizar el ejército, distribuir tierras y establecer impuestos. |
+| Romanos | Perfeccionaron los censos y registraban nacimientos, defunciones, matrimonios y propiedades. |
+| Edad Media | Carlomagno y Guillermo el Conquistador impulsaron importantes registros territoriales y poblacionales. |
+| Incas | Utilizaban los quipus, un sistema de cuerdas y nudos que permitía registrar cantidades e información. |
+| Siglo XVI | Girolamo Cardano estudió problemas relacionados con los juegos de azar, aportando ideas tempranas al desarrollo de la probabilidad. |
+| Siglo XVII | John Graunt analizó registros de mortalidad de Londres en 1662. Pascal y Fermat contribuyeron al desarrollo de la probabilidad. |
+| Siglos XVIII y XIX | Se desarrollaron la teoría de errores, la distribución normal o campana de Gauss y los métodos de mínimos cuadrados. |
+| Siglo XX hasta hoy | La llegada de los computadores y programas especializados permitió procesar grandes cantidades de información. |
+
+1.3. La estadística en la actualidad
+
+Actualmente, la estadística está presente en prácticamente todos los campos de la sociedad.
+
+- **Gobierno:** permite conocer las necesidades de la población y distribuir los recursos públicos.
+- **Salud:** ayuda a identificar enfermedades y evaluar los servicios médicos.
+- **Economía:** permite estudiar el desempleo, la inflación y el crecimiento económico.
+- **Educación:** facilita conocer los resultados académicos.
+- **Administración pública:** permite evaluar programas, proyectos y políticas públicas.
+
+Un ejemplo importante es el uso de la estadística por parte de las alcaldías y gobernaciones para identificar cuáles son las comunidades que necesitan mayor inversión en educación, salud, vías y servicios públicos.
+
+# 2. Conceptos Fundamentales
+
+2.1. ¿Qué es la estadística?
+
+La estadística es la ciencia que se encarga de observar, recolectar, organizar, presentar, interpretar y analizar datos para convertirlos en información útil.
+
+Su finalidad es facilitar la comprensión de diferentes situaciones y apoyar la toma de decisiones.
+
+2.2. Estadística descriptiva
+
+Es la rama de la estadística que permite organizar, resumir y presentar información mediante tablas, gráficos y medidas numéricas.
+
+Se desarrolla principalmente mediante cinco pasos:
+
+1.  Observar el fenómeno que se desea estudiar.
+2.  Recolectar los datos.
+3.  Organizar la información en tablas y gráficas.
+4.  Interpretar los resultados.
+5.  Analizar y comunicar los hallazgos.
+
+**Ejemplo:**
+
+Una alcaldía recopila información sobre la cantidad de personas atendidas en los centros de salud durante los últimos seis meses. Posteriormente, organiza los datos en tablas y gráficos para identificar cuáles fueron los meses con mayor atención.
+
+La estadística descriptiva permite comprender lo que muestran los datos recopilados.
+
+2.3. Estadística inferencial
+
+Es la rama de la estadística que utiliza información obtenida de una muestra para realizar estimaciones, predicciones o conclusiones sobre una población.
+
+**Ejemplo:**
+
+Una alcaldía desea conocer la opinión de todos los habitantes sobre el servicio de recolección de basuras. Para ello, selecciona una muestra de ciudadanos y utiliza sus respuestas para estimar la opinión general.
+
+La estadística inferencial permite pasar de los resultados de una muestra a conclusiones sobre una población, teniendo en cuenta el margen de error y la incertidumbre.
+
+2.4. Población
+
+Es el conjunto total de elementos, individuos u objetos que tienen una característica de interés para un estudio estadístico.
+
+Se representa con la letra **N**.
+
+**Ejemplos:**
+
+- Todos los estudiantes matriculados en la ESAP, si se desea estudiar sus calificaciones.
+- Los 5.000 cerdos de una granja, si se desea estudiar su peso.
+- Todos los habitantes de un municipio, si se desea conocer sus ingresos.
+
+::: callout-tip
+**Para tener en cuenta:** La población está formada por las unidades que se estudian. La característica que se mide en ellas se llama variable.
+
+Por ejemplo, si estudiamos las notas de los estudiantes de la ESAP, los estudiantes conforman la población y las notas son la variable.
+:::
+
+La persona, animal u objeto del cual se obtiene la información se denomina unidad de estudio.
+
+2.5. Muestra
+
+Es una parte de la población que se selecciona para realizar un estudio estadístico.
+
+Se representa con la letra **n**.
+
+Una muestra debe seleccionarse mediante un procedimiento adecuado para que represente lo mejor posible las características de la población.
+
+**Ejemplo:**
+
+Si una universidad tiene 2.000 estudiantes y se seleccionan 200 para conocer su opinión sobre los servicios educativos, esos 200 estudiantes conforman la muestra.
+
+Se utiliza una muestra cuando:
+
+- La población es muy grande y resulta costoso estudiar a todos sus integrantes.
+- Se necesita ahorrar tiempo y recursos.
+- La población es infinita o no se conoce su tamaño.
+- El procedimiento de medición implica destruir el objeto estudiado, como sucede con algunas pruebas de resistencia de materiales.
+
+2.6. Censo
+
+Es el procedimiento mediante el cual se recopila información de todos los elementos que conforman una población.
+
+**Ejemplo:**
+
+Cuando una institución realiza una encuesta a todos los estudiantes matriculados para conocer sus condiciones socioeconómicas, está realizando un estudio censal.
+
+2.7. Diferencia entre población, muestra y censo
+
+| Concepto | Significado | Ejemplo |
+|:-----------------------|:-----------------------|:-----------------------|
+| Población | Total de elementos que se desean estudiar. | 2.000 estudiantes. |
+| Muestra | Parte de la población seleccionada. | 200 estudiantes. |
+| Censo | Estudio de todos los elementos de la población. | Encuestar a los 2.000 estudiantes. |
+
+2.8. Tablas y gráficas
+
+Las tablas y las gráficas son instrumentos que permiten organizar y presentar la información estadística.
+
+**Tabla:** es un instrumento de resumen que organiza los datos en filas y columnas.
+
+**Gráfica:** es una representación visual que facilita la comprensión y comparación de los datos.
+
+Una tabla estadística debe contener, como mínimo:
+
+1.  **Título:** debe indicar qué información presenta, dónde y cuándo se recopilaron los datos.
+2.  **Cuerpo:** contiene la información organizada en filas y columnas.
+3.  **Contenido:** presenta las variables y sus respectivas frecuencias o resultados.
+4.  **Nota al pie:** indica la fuente de donde provienen los datos.
+
+**Ejemplo de una tabla estadística:**
+
+| Medio de transporte | Número de estudiantes |
+|:--------------------|----------------------:|
+| Motocicleta         |                    25 |
+| Bus                 |                    40 |
+| Bicicleta           |                    10 |
+| Caminando           |                    15 |
+| Automóvil           |                    10 |
+| **Total**           |               **100** |
+
+*Fuente: ejemplo hipotético elaborado para fines académicos.*
+
+# 3. Variables y su Clasificación
+
+3.1. ¿Qué es una variable?
+
+Una variable es una característica o propiedad que puede cambiar y asumir diferentes valores entre los elementos de una población o muestra.
+
+**Ejemplos:**
+
+- Edad.
+- Peso.
+- Estatura.
+- Estado civil.
+- Nivel de escolaridad.
+- Número de hijos.
+- Ingresos mensuales.
+
+Las variables son fundamentales porque permiten identificar qué información se desea estudiar y analizar.
+
+3.2. Clasificación según su naturaleza
+
+Las variables se clasifican en dos grandes grupos: cualitativas y cuantitativas.
+
+A. Variables cualitativas
+
+Son aquellas que describen características, cualidades o categorías. No representan cantidades numéricas, aunque en algunos casos se utilicen códigos para identificarlas.
+
+**Ejemplos:**
+
+- Color de ojos.
+- Estado civil.
+- Género.
+- Religión.
+- Partido político.
+- Marca de computador.
+
+B. Variables cuantitativas
+
+Son aquellas que se expresan mediante números y representan cantidades que se pueden contar o medir.
+
+Se dividen en dos tipos:
+
+**1. Cuantitativas discretas**
+
+Son aquellas que se obtienen mediante un conteo y generalmente toman valores enteros.
+
+Ejemplos:
+
+- Número de hijos.
+- Número de hermanos.
+- Número de celulares.
+- Número de goles.
+- Cantidad de estudiantes.
+
+**2. Cuantitativas continuas**
+
+Son aquellas que se obtienen mediante mediciones y pueden tomar valores decimales.
+
+Ejemplos:
+
+- Peso.
+- Estatura.
+- Temperatura.
+- Salario.
+- Volumen.
+- Tiempo.
+
+::: callout-warning
+**¡Importante!**
+
+La edad se considera una variable continua cuando se mide con precisión, porque puede expresarse en años, meses, días y fracciones de tiempo. Sin embargo, si se registra únicamente en años cumplidos, sus valores serán enteros.
+
+El número de hijos es una variable discreta porque no se puede tener 1,8 hijos.
+:::
+
+3.3. Clasificación según su escala de medición
+
+Las escalas de medición permiten identificar cómo se pueden organizar, comparar e interpretar los datos.
+
+Existen cuatro escalas principales:
+
+A. Escala nominal
+
+Se utiliza para clasificar variables cualitativas en categorías que no tienen un orden específico.
+
+**Ejemplos:**
+
+- Estado civil: soltero, casado, viudo o unión libre.
+- Color de ojos: azul, verde, café o negro.
+- Tipo de sangre: A, B, AB u O.
+
+En esta escala no se puede establecer que una categoría sea superior o inferior a otra.
+
+B. Escala ordinal
+
+Se utiliza para clasificar variables cualitativas cuyas categorías tienen un orden o jerarquía.
+
+**Ejemplos:**
+
+- Nivel educativo: primaria, secundaria, pregrado y posgrado.
+- Desempeño académico: bajo, medio y alto.
+- Nivel de satisfacción: insatisfecho, neutral y satisfecho.
+
+En esta escala existe un orden, pero no necesariamente una distancia igual entre las categorías.
+
+C. Escala de intervalo
+
+Se utiliza para variables cuantitativas en las que las diferencias entre los valores tienen significado, pero el cero no representa la ausencia de la característica medida.
+
+**Ejemplo: la temperatura en grados Celsius.**
+
+Si en Ibagué se registran 20 °C y en otro municipio 40 °C, podemos afirmar que existe una diferencia de 20 grados.
+
+Sin embargo, no podemos decir que 40 °C representa el doble de temperatura que 20 °C, porque el cero de esta escala es arbitrario.
+
+D. Escala de razón
+
+Se utiliza para variables cuantitativas que tienen un cero absoluto, es decir, un valor que representa la ausencia de la característica medida.
+
+**Ejemplos:**
+
+- Salario.
+- Peso.
+- Estatura.
+- Número de hijos.
+- Cantidad de productos vendidos.
+
+En esta escala sí es posible establecer relaciones de proporción.
+
+Por ejemplo, si una persona recibe un ingreso mensual de \$10.000.000 y otra recibe \$2.000.000, la primera recibe cinco veces el ingreso de la segunda.
+
+3.4. Cuadro comparativo de las escalas de medición
+
+| Escala | Tipo de variable habitual | Característica principal | Ejemplo |
+|:-----------------|:-----------------|:-----------------|:-----------------|
+| Nominal | Cualitativa | Categorías sin orden. | Estado civil. |
+| Ordinal | Cualitativa | Categorías con orden. | Nivel educativo. |
+| Intervalo | Cuantitativa | Diferencias significativas y cero arbitrario. | Temperatura en °C. |
+| Razón | Cuantitativa | Tiene cero absoluto y permite comparar proporciones. | Salario. |
+
+3.5. Resumen general de clasificación de variables
+
+| Variable              | Naturaleza   | Clasificación | Escala    |
+|:----------------------|:-------------|:--------------|:----------|
+| Estado civil          | Cualitativa  | No aplica     | Nominal   |
+| Nivel de escolaridad  | Cualitativa  | No aplica     | Ordinal   |
+| Número de hijos       | Cuantitativa | Discreta      | Razón     |
+| Salario               | Cuantitativa | Continua      | Razón     |
+| Temperatura en °C     | Cuantitativa | Continua      | Intervalo |
+| Estatura              | Cuantitativa | Continua      | Razón     |
+| Número de estudiantes | Cuantitativa | Discreta      | Razón     |
+| Nivel de satisfacción | Cualitativa  | No aplica     | Ordinal   |
+
+# 4. Aplicación de la estadística en la Administración Pública
+
+La estadística es una herramienta indispensable para la administración pública porque permite conocer las condiciones de una comunidad y tomar decisiones basadas en información.
+
+Por ejemplo, un alcalde puede utilizar información estadística para:
+
+- Identificar cuántas personas necesitan atención médica.
+- Conocer los niveles de desempleo del municipio.
+- Determinar cuántos niños y jóvenes necesitan cupos escolares.
+- Identificar los barrios con mayores problemas de servicios públicos.
+- Evaluar si los recursos del presupuesto municipal están siendo utilizados adecuadamente.
+
+**Ejemplo práctico:**
+
+Supongamos que una alcaldía desea conocer la satisfacción de los habitantes frente al servicio de recolección de basuras.
+
+Para realizar este estudio puede:
+
+1.  Definir la población: todos los habitantes del municipio.
+2.  Seleccionar una muestra: un grupo representativo de ciudadanos.
+3.  Definir la variable: nivel de satisfacción con el servicio.
+4.  Recolectar los datos: mediante encuestas.
+5.  Organizar los resultados: utilizando tablas y gráficas.
+6.  Analizar la información: identificar los sectores con mayor inconformidad.
+7.  Tomar decisiones: implementar medidas para mejorar el servicio.
+
+Este ejemplo demuestra que la estadística no solamente sirve para realizar operaciones matemáticas, sino también para comprender problemas reales y contribuir a una mejor gestión pública.
+
+# 5. Conclusiones
+
+1.  La estadística ha evolucionado desde las primeras civilizaciones, que necesitaban registrar información sobre sus habitantes y recursos, hasta convertirse en una herramienta científica fundamental para la sociedad actual.
+
+2.  La estadística descriptiva y la inferencial cumplen funciones diferentes pero complementarias. La primera permite organizar y analizar los datos observados, mientras que la segunda permite realizar estimaciones y conclusiones sobre una población a partir de una muestra.
+
+3.  Las variables son fundamentales en cualquier estudio estadístico porque permiten identificar las características que se desean analizar. Su clasificación facilita la selección de los métodos adecuados para organizar e interpretar la información.
+
+4.  Las escalas nominal, ordinal, de intervalo y de razón permiten comprender las características de los datos y establecer qué tipos de comparaciones y operaciones estadísticas son apropiadas.
+
+5.  En la administración pública, la estadística permite conocer las necesidades de la población, evaluar los resultados de la gestión y tomar decisiones más responsables sobre la utilización de los recursos públicos.
+
+------------------------------------------------------------------------
+
+::: {style="text-align:center; padding:25px; border-top:3px solid #D5A52A;"}
+**ESCUELA SUPERIOR DE ADMINISTRACIÓN PÚBLICA – ESAP**
+
+*Taller Uno: Historia, Conceptos y Variables*
+
+David Santiago Rivas Portela
+:::
